@@ -6,14 +6,16 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body { /*html , body = para funcionar em HTML E BODY*/
+html,
+body {
+  /*html , body = para funcionar em HTML E BODY*/
   height: 100vh;
   width: 100vw;
   background-color: black;
 }
 
 body {
-  background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+  background: url("../imagens/fundo-madeira.jpg") no-repeat top center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -21,14 +23,16 @@ body {
 main {
   height: 100vh;
   position: relative; /*Relativo para que eu possa centralizar a SECTION ID de baixo com ABSOLUTE*/
-  
 }
 
 section#telefone {
   position: absolute; /**O Posicionamento absoluto permite eu centralizar uma div no meio da tela.**/
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /**O Translate me permite inverter o posicionamento central para assim definitivamente centralizar**/
+  transform: translate(
+    -50%,
+    -50%
+  ); /**O Translate me permite inverter o posicionamento central para assim definitivamente centralizar**/
 
   height: 627px;
   width: 311px;
@@ -42,5 +46,26 @@ iframe#tela {
   left: 22px;
   height: 471px;
   width: 268px;
+}
 
+section#redes-sociais { /*posicionamento dos botões*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+section#redes-sociais img { /*deixando a imagem pequena e redondinha*/
+  width: 50px;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+section#redes-sociais img:hover { /*tudo que acontecer aqui, sera quando passar o mouse em cima*/
+  border: 2px solid rgba(255, 255, 255, 0.61); /*somente aqui se passar o cursor em cima os botoes irão se mexer pois a borda não está fazendo parte do objeto. use o box-sizing: border box pra quebrar isso*/
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.651);
+  transition: transform .2s; /*transição para o codigo TRANSFORM
+  se eu quiser suavisar a borda tambem, é so dar uma virgula, adicionar o nome + o tempo. ex: transition: transform .2s, border .5s;*/
 }
