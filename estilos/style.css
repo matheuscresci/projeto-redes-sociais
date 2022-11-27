@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body { /*html , body = para funcionar em HTML E BODY*/
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+body {
+  background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  height: 100vh;
+  position: relative; /*Relativo para que eu possa centralizar a SECTION ID de baixo com ABSOLUTE*/
+  
+}
+
+section#telefone {
+  position: absolute; /**O Posicionamento absoluto permite eu centralizar uma div no meio da tela.**/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /**O Translate me permite inverter o posicionamento central para assim definitivamente centralizar**/
+
+  height: 627px;
+  width: 311px;
+  background-color: blue;
+  background: url(../imagens/frame-iphone.png) no-repeat;
+}
